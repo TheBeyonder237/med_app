@@ -1,0 +1,256 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* General styling */
+body {
+    background-color: #0E1117;
+    color: #E5E7EB;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate__fadeIn {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate__pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Title */
+.title {
+    color: #FFD700;
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Section headers */
+.section-header {
+    color: #1E3A8A;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-top: 1.5em;
+    border-bottom: 3px solid #FFD700;
+    padding-bottom: 0.3em;
+}
+
+/* Subheaders */
+.subheader {
+    color: #FFD700;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Content boxes */
+.content, .intro {
+    background-color: #1C2526;
+    padding: 2em;
+    border-radius: 12px;
+    margin-bottom: 1.5em;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.content:hover, .intro:hover {
+    transform: translateY(-5px);
+}
+
+/* Result box */
+.result-box {
+    background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+    padding: 1.5em;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 1.5em 0;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+    color: #FFF;
+    animation: pulse 3s infinite;
+}
+
+/* Recommendation box */
+.recommendation {
+    background-color: #10B981;
+    padding: 0.8em;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    color: #FFF;
+    font-size: 1em;
+}
+
+/* Download button */
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700, #FBBF24);
+    color: #0E1117;
+    padding: 0.8em 1.5em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+}
+
+/* Code blocks */
+.code-block {
+    background-color: #1C2526;
+    color: #E5E7EB;
+    padding: 1em;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    margin: 1em 0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar styling */
+.sidebar-header {
+    color: #FFD700;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.sidebar-subheader {
+    color: #1E3A8A;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.sidebar-footer {
+    color: #9CA3AF;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 2em;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 3em;
+    color: #9CA3AF;
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 1em 0;
+    border-top: 1px solid #1C2526;
+}
+
+/* Chatbot styling */
+.chat-bubble {
+    padding: 1em;
+    border-radius: 12px;
+    margin-bottom: 0.5em;
+    max-width: 80%;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.chat-bubble.user {
+    background: linear-gradient(135deg, #3B82F6, #1E3A8A);
+    color: #FFF;
+    margin-left: auto;
+    text-align: right;
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.chat-bubble.bot {
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: #FFF;
+    margin-right: auto;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Streamlit components */
+.stButton>button {
+    background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8em 1.5em;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stButton>button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+}
+
+.stFileUploader {
+    background-color: #1C2526;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.stSelectbox {
+    background-color: #1C2526;
+    border-radius: 8px;
+    color: #E5E7EB;
+}
+
+.stTextInput {
+    background-color: #1C2526;
+    border-radius: 8px;
+    color: #E5E7EB;
+    padding: 0.8em;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.stSlider {
+    background-color: #1C2526;
+    border-radius: 8px;
+    padding: 0.5em;
+}
+
+/* Plotly charts */
+.plotly-chart {
+    background-color: #1C2526;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Matplotlib plots */
+div.stPlotlyChart, div.stPyplot {
+    background-color: #1C2526;
+    border-radius: 12px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dataframe */
+div.stDataFrame {
+    background-color: #1C2526;
+    border-radius: 12px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
