@@ -1,0 +1,15 @@
+streamlit
+pandas
+numpy
+torch
+scikit-learn
+shap
+plotly
+seaborn
+matplotlib
+reportlab
+sqlalchemy
+loguru
+rasa
+transformers
+requests
